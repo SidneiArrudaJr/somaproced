@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Procedimentos</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <div class="container">
+                <h1>Registrar Procedimentos</h1>
+        <form id="procedimento-form">
+            <label for="descricao">Descrição:</label>
+            <select id="descricao" name="descricao" required>
+                <option value=""></option>
+                <option value="Consulta">Consulta</option>
+                <option value="Profilaxia">Profilaxia</option>
+                <option value="Restauração 1 face">Restauração 1 face</option>
+                <option value="Restauração 2 faces">Restauração 2 faces</option>
+                <option value="Tratamento de canal unirradicular">Tratamento de canal unirradicular</option>
+                <option value="Tratamento de canal birradicular">Tratamento de canal birradicular</option>
+                <option value="Tratamento de canal multirradicular">Tratamento de canal multirradicular</option>
+                <option value="Diaria COP">Diaria COP</option>
+            </select>
+            <label for="valor">Valor:</label>
+            <select id="valor" name="valor" required>
+                <option value=""></option>
+                <option value="10.2">R$10,20</option>
+                <option value="42">R$42,00</option>
+                <option value="77.4">R$77,40</option>
+                <option value="99.9">R$99,90</option>
+                <option value="159.9">R$159,90</option>
+                <option value="18.3">R$18,30</option>
+                <option value="26.4">R$26,40</option>
+                <option value="200">R$200,00</option>
+                <option value="120">R$120,00</option>
+                <!-- Os valores serão preenchidos dinamicamente pelo JavaScript -->
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+        <div id="procedimentos-list">
+            <h2>Procedimentos do Dia</h2>
+            <ul id="lista-procedimentos"></ul>
+            <h3>Total: R$ <span id="total">0.00</span></h3>
+        </div>
+    </div>
+    <script src="public/scripts.js"></script>
+</body>
+</html>
